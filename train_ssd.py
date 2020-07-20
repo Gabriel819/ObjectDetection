@@ -27,7 +27,7 @@ parser.add_argument("--dataset_type", default="voc", type=str,
                     help='Specify dataset type. Currently support voc and open_images.')
 
 parser.add_argument('--datasets', nargs='+', help='Dataset directory path')
-parser.add_argument('--validation_dataset', default="C:/Users/kim hyun jun/data/VOCdevkit/VOC2007", help='Dataset directory path')
+parser.add_argument('--validation_dataset', default="/VOCdevkit/VOC2007", help='Dataset directory path')
 parser.add_argument('--balance_data', action='store_true',
                     help="Balance training data by down-sampling more frequent labels.")
 
@@ -35,7 +35,7 @@ parser.add_argument('--balance_data', action='store_true',
 #모델 바꾸기
 parser.add_argument('--net', default="vgg16-ssd",
                     help="The network architecture, it can be asb-vgg-ssd, mb1-ssd, mb1-lite-ssd, mb2-ssd-lite or vgg16-ssd.")
-parser.add_argument('--asb_wts', default="C:/Users/kim hyun jun/PycharmProjects/SSD_for_git/models/model.pth",
+parser.add_argument('--asb_wts', default="/models/model.pth",
                     help="assemblenet vgg wts path")
 parser.add_argument('--freeze_base_net', action='store_true',
                     help="Freeze base net layers.")
@@ -212,7 +212,7 @@ if __name__ == '__main__':
             raise ValueError(f"Dataset type {args.dataset_type} is not supported.")
         datasets.append(dataset)
     """
-    dataset_path = "C:/Users/kim hyun jun/data/VOCdevkit/VOC2007"
+    dataset_path = "/VOCdevkit/VOC2007"
     dataset = VOCDataset(dataset_path, transform=train_transform,
                          target_transform=target_transform, keep_difficult=True)
     label_file = os.path.join(args.checkpoint_folder, "voc-model-labels.txt")
