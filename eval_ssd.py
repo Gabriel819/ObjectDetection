@@ -22,9 +22,9 @@ parser.add_argument('--asb_wts', default="C:/Users/kim hyun jun/PycharmProjects/
 
 parser.add_argument("--dataset_type", default="voc", type=str,
                     help='Specify dataset type. Currently support voc and open_images.')
-parser.add_argument("--dataset", default="C:/Users/kim hyun jun/data/VOCdevkit/VOC2007",
+parser.add_argument("--dataset", default="/data/VOCdevkit/VOC2007",
                     type=str, help="The root directory of the VOC dataset or Open Images dataset.")
-parser.add_argument("--label_file", default="C:/Users/kim hyun jun/data/VOCdevkit/VOC2007/label.txt",
+parser.add_argument("--label_file", default="/data/VOCdevkit/VOC2007/label.txt",
                     type=str, help="The label file path.")
 parser.add_argument("--use_cuda", type=str2bool, default=True)
 parser.add_argument("--use_2007_metric", type=str2bool, default=True)
