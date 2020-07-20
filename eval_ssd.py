@@ -17,7 +17,7 @@ parser = argparse.ArgumentParser(description="SSD Evaluation on VOC Dataset.")
 parser.add_argument('--net', default="vgg16-ssd",
                     help="The network architecture, it can be asb-vgg-ssd, mb1-ssd, mb1-lite-ssd, mb2-ssd-lite or vgg16-ssd.")
 parser.add_argument("--trained_model",default="./models/vgg16-ssd-Epoch-130-Loss-4.379311684199742.pth",type=str)
-parser.add_argument('--asb_wts', default="C:/Users/kim hyun jun/PycharmProjects/SSD_for_git/models/model.pth",
+parser.add_argument('--asb_wts', default="/models/model.pth",
                     help="assemblenet vgg wts path")
 
 parser.add_argument("--dataset_type", default="voc", type=str,
